@@ -1,52 +1,52 @@
 'use strict'
 
-var imprint=angular.module('imprint',['ngRoute','imprintControllers'])
-imprint.config(function($routeProvider, $locationProvider){
-    $routeProvider.when('/welcome', {
+var imprint=angular.module('imprint',['ui.router','imprintControllers','ngMaterial']);
+imprint.config(function($stateProvider,$urlRouterProvider){
+    $stateProvider
+    .state('welcome', {
+        url:'/welcome',
         templateUrl: 'views/welcome.html',
         controller:'Welcome'
    })
 
-   $routeProvider.when('/main', {
-     cache: false,
+   .state('main', {
+       url:'/main',
      templateUrl: 'views/main.html',
      controller:'MainCtrl'
    })
-   $routeProvider.when('/main.home', {
+   .state('main.home', {
      url:'/home',
      views:{
     'main-home':{
        templateUrl: 'views/main-home.html',
        controller:'HomeCtrl'
-    }
-    }
-   })
-   $routeProvider.when('/main.add', {
-     url:'/home',
+    }}
+  })
+   .state('main.add', {
+     url:'/add',
      views:{
     'main-add':{
        templateUrl: 'views/main-add.html',
        controller:'AddCtrl'
-    }
-  }
+    }}
    })
-   $routeProvider.when('/main.view', {
+   .state('main.view', {
      url:'/view',
      views:{
     'main-home':{
        templateUrl: 'views/main-view.html',
        controller:'ViewCtrl'
-    }
-    }
-   })
-  //  .otherwise({
-  //    redirectTo:'/main'
-  //  })
+    }}
+  })
+  .state('main.help', {
+    url:'/help',
+    views:{
+   'main-help':{
+      templateUrl: 'views/main-help.html',
+      controller:'HelpCtrl'
+   }}
+ });
 
-      .otherwise({
-        redirectTo:'/welcome'
-      })
 
-
-// $locationProvider.hashPrefix('');
+ $urlRouterProvider.otherwise("/welcome");
 });

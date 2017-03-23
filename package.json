@@ -8,13 +8,14 @@
     "test": "http-server ./www -o"
   },
 
-  "author": "kishorekumar",
+  "author": "kishorekumar,shakaleshwar,sathishkumar,meenakshi,oviya,amruthasridhar",
   "license": "ISC",
   "devDependencies": {
     "electron": "^1.6.1"
   },
   "dependencies": {
     "electron": "^1.6.1",
-    "nodemon": "^1.11.0"
-  }
+    "nodemon": "^1.11.0",
+    "angular":"1.2.5"
+    }
 }

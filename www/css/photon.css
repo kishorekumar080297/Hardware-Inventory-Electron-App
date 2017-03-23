@@ -533,10 +533,10 @@ h6 {
 
 .title {
   margin: 0;
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 400;
   text-align: center;
-  color: #555;
+  color: #fff;
   cursor: default;
 }
 
@@ -2266,8 +2266,8 @@ td:last-child {
 .tab-group {
   margin-top: -1px;
   display: flex;
-  border-top: 1px solid #989698;
-  border-bottom: 1px solid #989698;
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
 }
 
 .tab-item {
@@ -2276,11 +2276,11 @@ td:last-child {
   padding: 3px;
   font-size: 12px;
   text-align: center;
-  border-left: 1px solid #989698;
-  background-color: #b8b6b8;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b8b6b8), color-stop(100%, #b0aeb0));
-  background-image: -webkit-linear-gradient(top, #b8b6b8 0%, #b0aeb0 100%);
-  background-image: linear-gradient(to bottom, #b8b6b8 0%, #b0aeb0 100%);
+  border-left: 1px solid #fff;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #fff));
+  background-image: -webkit-linear-gradient(top, #444 0%, #444 100%);
+  background-image: linear-gradient(to bottom, #444 0%, #444 100%);
 }
 .tab-item:first-child {
   border-left: 0;
@@ -2288,8 +2288,8 @@ td:last-child {
 .tab-item.active {
   background-color: #d4d2d4;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d4d2d4), color-stop(100%, #cccacc));
-  background-image: -webkit-linear-gradient(top, #d4d2d4 0%, #cccacc 100%);
-  background-image: linear-gradient(to bottom, #d4d2d4 0%, #cccacc 100%);
+  background-image: -webkit-linear-gradient(top, #777 0%, #cccacc 777%);
+  background-image: linear-gradient(to bottom, #777 0%, #777 100%);
 }
 .tab-item .icon-close-tab {
   position: absolute;
@@ -2314,12 +2314,13 @@ td:last-child {
   bottom: 0;
   left: 0;
   content: "";
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: #none;
   opacity: 0;
-  transition: opacity .1s linear;
+  transition: opacity .s linear;
   z-index: 1;
 }
 .tab-item:hover:not(.active):after {
+  color:#fff !important;
   opacity: 1;
 }
 .tab-item:hover .icon-close-tab {

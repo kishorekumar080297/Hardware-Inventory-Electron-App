@@ -8,8 +8,8 @@ const BrowserWindow=electron.BrowserWindow;
 app.on('ready',function() {
     mainWindow=new BrowserWindow({
       name:"Imprint",
-      width:800,
-      height:600});
+      width:1024,
+      height:768});
       // mainWindow.setMenu(null);
 
     mainWindow.loadURL(url.format({

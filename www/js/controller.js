@@ -1,19 +1,19 @@
 angular.module('imprintControllers',[])
-.controller('Welcome',function($timeout,$location){
+.controller('Welcome',function($timeout,$location,$state){
   $timeout(function() {
-     $location.path('/main');
+     $state.go('main');
    }, 3000);
 })
-.controller('MainCtrl',function($scope,$location){
+.controller('MainCtrl',function($scope,$location,$state){
   $scope.goToHome=function(){
-    $location.path('/main.home');
-  }
+    $state.go('main.home');
+  };
   $scope.goToAdd=function(){
-    $location.path('/main.add');
-  }
+    $state.go('main.add');
+  };
   $scope.goToView=function(){
-    $location.path('/main.view');
-  }
+    $state.go('main.view');
+  };
 })
 .controller('HomeCtrl',function(){
 
@@ -23,4 +23,4 @@ angular.module('imprintControllers',[])
 })
 .controller('ViewCtrl',function(){
 
-})
+});

@@ -16,12 +16,17 @@
           font-family: "Pacific";
           src: url("../fonts/Pacifico-Regular.ttf");
           }
-          .pacific{
+
+        .pacific{
               font-family:"Pacific" !important;
-            }
+          }
         .title{
-          font-size: 22px;
-          margin-top: -7.5vh !important;
+          font-size: 25px;
+          margin-top: 0vh !important;
+
+        }
+        a:hover{
+          background-color: none;
         }
         .center{
           display: block;
@@ -34,7 +39,14 @@
         *, *:before, *:after {
         box-sizing: border-box;
         }
-
+        .title {
+          margin: 0;
+          font-size: 24px;
+          font-weight: 400;
+          text-align: center;
+          color: #fff;
+          cursor: default;
+        }
         .whitebg {
         background: #fff;
         }
@@ -142,7 +154,9 @@
         -webkit-transform-origin: 0 100%;
                 transform-origin: 0 100%;
         }
-
+        .dark{
+          color:#111 !important;
+        }
         @-webkit-keyframes ani-box {
         8.33% {
           -webkit-transform: translate3d(-50%, -50%, 0) scaleZ(2);
@@ -267,11 +281,6 @@
       text-align: center;
       font-family: "pacific";
   }
-.pane-mini{
-  background-color:#2c3e50;
-  width: 60px;
-  flex: none;
-}
 .bgcolor{
   background-color: #d7cec7;
 }
@@ -319,42 +328,16 @@
 }
 
 .icon{
-  color: #fff !important;
+  color: #000 !important;
   height: 10vh !important;
   padding-top: 3vh;
-  font-size: 20px;
+  font-size: 14px;
 
 }
 #button{
   background-color: transparent;
 }
 
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #2c3e50;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 20px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
 
 .sidenav .closebtn {
     position: absolute;
@@ -371,3 +354,13 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+.tabsdemoDynamicHeight md-content {
+  background-color: transparent !important; }
+  .tabsdemoDynamicHeight md-content md-tabs {
+    background: #f6f6f6;
+    border: 1px solid #e1e1e1; }
+    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+      background: white; }
+  .tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0; }

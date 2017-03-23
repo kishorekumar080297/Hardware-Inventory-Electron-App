@@ -1,1 +1,1 @@
-angular.module('imprintServices',['ngResource'])
+angular.module('imprintServices',[''])

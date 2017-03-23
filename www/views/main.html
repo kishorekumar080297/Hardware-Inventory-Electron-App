@@ -1,84 +1,28 @@
-<link rel="stylesheet" href="css/photon.min.css">
-<link rel="stylesheet" href="css/style.css">
-<div>
-<div class="window">
+
 <header class="toolbar1 toolbar-header">
-  <span class="nav centre reem"  onclick="openNav()">&#9776;</span>
-<span class="title center pacific white">&emsp;Imprint</span>
+<h3 class="title center pacific white">Imprint</h3>
 </header>
-<div class="window-content">
-  <div class="pane-group">
-    <div class="pane-mini sidebar white">
-      <nav class="nav-group">
-        <a class="nav-group-item">
-          <span class="icon icon-home" ng-click="goToHome()"></span>
-        </a>
-        <a class="nav-group-item centre">
-          <span class="icon icon-plus" ng-click="goToAdd()"></span>
-        </a>
-        <a class="nav-group-item">
-          <span class="icon icon-folder" ng-click="goToView()"></span>
-        </a>
-        <a class="nav-group-item">
-          <span class="icon icon"></span>
-        </a>
-        <a class="nav-group-item">
-          <span class="icon icon"></span>
-        </a>
-        <a class="nav-group-item">
-          <span class="icon icon"></span>
-        </a>
-      </nav>
-        <!--<span class="icon icon-home"></span>
-        <h4 class="centre desc">Home</h4>-->
-    </div>
-    <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="pane-mini sidebar white">
-      <nav class="nav-group">
-        <a class="nav-group-item">
-          <span class="icon icon-home">&nbsp;Home</span>
-        </a>
-        <a class="nav-group-item centre">
-          <span class="icon icon-plus">&nbsp;Add</span>
-        </a>
-        <a class="nav-group-item">
-          <span class="icon icon-folder"></span>
-        </a>
-        <a class="nav-group-item">
-          <span class="icon icon-signal"></span>
-        </a>
-        <a class="nav-group-item">
-          <span class="icon icon-print"></span>
-        </a>
-        <a class="nav-group-item">
-          <span class="icon icon-help"></span>
-        </a>
-      </nav>
-        <!--<span class="icon icon-home"></span>
-        <h4 class="centre desc">Home</h4>-->
-    </div>
-  </div>
-    <div class="pane">
+<md-tabs md-stretch-tabs md-selected="selectedIndex" style="width:200vw !important;">
+    <md-tab>
+      <a class="icon icon-home reem dark" ng-click="goToHome()" aria-cntrols="HomeCtrl">&nbsp;Home</a>
+    </md-tab>
+    <md-tab>
+      <a class="icon icon-plus reem dark" ng-click="goToAdd()">&nbsp;Add</a>
+    </md-tab>
+    <md-tab>
+      <a class="icon icon-folder reem" ng-click="goToView()">&nbsp;View</a>
+    </md-tab>
+    <md-tab>
+      <a class="icon icon-pencil reem" ng-click="goToUpdate()">&nbsp;Update</a>
+    </md-tab>
+    <md-tab>
+      <a class="icon icon-help reem" ng-click="goToHelp()">&nbsp;Help</a>
+    </md-tab>
+</md-tabs>
+<div ui-view></div>
+<style style="text/css">
+.md-tab{
+width:30vh !important;
 
-    </div>
-  </div>
-</div>
-<!--<footer class="toolbar toolbar-footer">
-  <h1 class="title">Footer</h1>
-</footer>-->
-</div>
-<div >
-<h4 style="padding-top:55vh;padding-right:55vh;">Manage your hardware resources efficiently</h4>
-</div>
-</body>
-<script>
-function openNav() {
-document.getElementById("mySidenav").style.width = "160px";
 }
-
-function closeNav() {
-document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-</div>
+</style>
