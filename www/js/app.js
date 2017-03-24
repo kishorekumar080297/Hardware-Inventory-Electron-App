@@ -1,6 +1,6 @@
 'use strict'
 
-var imprint=angular.module('imprint',['ui.router','imprintControllers','ngMaterial']);
+var imprint=angular.module('imprint',['ui.router','ngAnimate','imprintControllers','ngMaterial']);
 imprint.config(function($stateProvider,$urlRouterProvider){
     $stateProvider
     .state('welcome', {
@@ -8,45 +8,39 @@ imprint.config(function($stateProvider,$urlRouterProvider){
         templateUrl: 'views/welcome.html',
         controller:'Welcome'
    })
-
+   //Tabs-Container
    .state('main', {
+       abstract: true,
        url:'/main',
-     templateUrl: 'views/main.html',
-     controller:'MainCtrl'
+       templateUrl: 'views/main.html'
    })
    .state('main.home', {
      url:'/home',
-     views:{
-    'main-home':{
-       templateUrl: 'views/main-home.html',
+       templateUrl: 'views/home.html',
        controller:'HomeCtrl'
-    }}
   })
    .state('main.add', {
      url:'/add',
-     views:{
-    'main-add':{
-       templateUrl: 'views/main-add.html',
+       templateUrl: 'views/add.html',
        controller:'AddCtrl'
-    }}
    })
    .state('main.view', {
      url:'/view',
-     views:{
-    'main-home':{
-       templateUrl: 'views/main-view.html',
+       templateUrl: 'views/view.html',
        controller:'ViewCtrl'
-    }}
-  })
-  .state('main.help', {
-    url:'/help',
-    views:{
-   'main-help':{
-      templateUrl: 'views/main-help.html',
-      controller:'HelpCtrl'
-   }}
+      })
+  .state('main.update', {
+    url:'/update',
+      templateUrl: 'views/update.html',
+      controller:'UpdateCtrl'
+ })
+
+  .state('main.about', {
+    url:'/about',
+      templateUrl: 'views/about.html',
+      controller:'AboutCtrl'
  });
 
 
  $urlRouterProvider.otherwise("/welcome");
-});
+})

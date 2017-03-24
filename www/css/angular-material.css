@@ -5091,7 +5091,7 @@ md-tabs-wrapper {
     -webkit-flex-direction: row;
             flex-direction: row; }
     md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item {
-      -webkit-box-flex:md-stretch-tabs 1;
+      -webkit-box-flex: 1;
       -webkit-flex-grow: 1;
               flex-grow: 1; }
 

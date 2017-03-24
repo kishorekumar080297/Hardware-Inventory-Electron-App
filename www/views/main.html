@@ -1,28 +1,34 @@
-
+  <link rel="stylesheet" href="css/style.css">
 <header class="toolbar1 toolbar-header">
 <h3 class="title center pacific white">Imprint</h3>
 </header>
-<md-tabs md-stretch-tabs md-selected="selectedIndex" style="width:200vw !important;">
-    <md-tab>
-      <a class="icon icon-home reem dark" ng-click="goToHome()" aria-cntrols="HomeCtrl">&nbsp;Home</a>
+
+<md-tabs md-stretch-tabs="always" class="md-primary md-hue-3" md-selected="selectedIndex">
+    <md-tab   ui-sref="main.home">
+      <span  class="icon icon-home reem dark">
+      &nbsp;Home
+      </span>
     </md-tab>
-    <md-tab>
-      <a class="icon icon-plus reem dark" ng-click="goToAdd()">&nbsp;Add</a>
+    <md-tab   ui-sref="main.add">
+      <span class="icon icon-download reem dark">
+        &nbsp;Add
+      </span>
     </md-tab>
-    <md-tab>
-      <a class="icon icon-folder reem" ng-click="goToView()">&nbsp;View</a>
+    <md-tab  ui-sref="main.view">
+      <span class="icon icon-docs reem">
+        &nbsp;View
+      </span>
     </md-tab>
-    <md-tab>
-      <a class="icon icon-pencil reem" ng-click="goToUpdate()">&nbsp;Update</a>
+    <md-tab ui-sref="main.update">
+      <span class="icon icon-upload reem">
+        &nbsp;Update
+      </span>
     </md-tab>
-    <md-tab>
-      <a class="icon icon-help reem" ng-click="goToHelp()">&nbsp;Help</a>
+    <md-tab  ui-sref="main.about">
+      <span class="icon icon-info-circled reem">
+        &nbsp;About
+      </span>
     </md-tab>
 </md-tabs>
-<div ui-view></div>
-<style style="text/css">
-.md-tab{
-width:30vh !important;
 
-}
-</style>
+<div ui-view></div>

@@ -22,8 +22,12 @@
           }
         .title{
           font-size: 25px;
-          margin-top: 0vh !important;
-
+          margin: 0;
+          font-size: 24px;
+          font-weight: 400;
+          text-align: center;
+          color: #fff;
+          cursor: default;
         }
         a:hover{
           background-color: none;
@@ -334,11 +338,13 @@
   font-size: 14px;
 
 }
+md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+    color: #000 !important;
+    background-color:#000 !important;
+}
 #button{
   background-color: transparent;
 }
-
-
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -354,13 +360,3 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
-.tabsdemoDynamicHeight md-content {
-  background-color: transparent !important; }
-  .tabsdemoDynamicHeight md-content md-tabs {
-    background: #f6f6f6;
-    border: 1px solid #e1e1e1; }
-    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
-      background: white; }
-  .tabsdemoDynamicHeight md-content h1:first-child {
-    margin-top: 0; }
