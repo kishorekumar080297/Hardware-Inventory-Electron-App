@@ -336,14 +336,30 @@
   height: 10vh !important;
   padding-top: 3vh;
   font-size: 14px;
-
+}
+.btn1{
+  background-color:#651fff !important;
+  border-radius: 25px;
+}
+.tab1{
+  background-color:#651fff !important;
+}
+.cardw{
+  background-color: #1565c0;
+}
+.backBtn{
+  background-color: none !important;
 }
 md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
     color: #000 !important;
-    background-color:#000 !important;
+    background-color:#111 !important;
 }
 #button{
   background-color: transparent;
+}
+.font{
+  font-size: 55px !important;
+  font-weight:lighter !important;
 }
 .sidenav .closebtn {
     position: absolute;

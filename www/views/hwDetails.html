@@ -1,0 +1,178 @@
+<header class="toolbar1 toolbar-header">
+<md-button class="md-fab md-raised backBtn test-tooltip" aria-label="back" style="margin-left:4vh !important" ng-click="goToAdd()">
+  <a class="icon icon-reply"></a>
+</md-button>
+<h3 class="title pacific white" style="margin-top:-7vh;">Hardware Details</h3>
+</header>
+  <md-content >
+    <div>&emsp;
+      <md-input-container>
+        <label>PC Name</label>
+        <input ng-model="user.pcName">
+      </md-input-container>
+      <md-input-container flex-md="">
+      <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date"></md-datepicker>
+      </md-input-container>      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<md-button class="md-raised md-primary btn1 center" style="margin-top:-1.5vh !important" ng-click="goToAuto()">To Update Automatically Click Here!!</md-button>
+    </div>
+  </md-content>
+
+  <md-content layout-padding="">
+    <div style="margin-top:-2vh !important;">
+      <form name="userForm">
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs="">
+            <label>PC Manufacturer</label>
+            <input ng-model="user.company" >
+          </md-input-container>
+
+        </div>
+
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Processor Manufacturer</label>
+            <md-select ng-model="user.Pname">
+              <md-option>Intel</md-option>
+              <md-option>AMD</md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Type</label>
+            <md-select ng-model="user.PType" value="md-option">
+              <md-option>Celeron</md-option>
+              <md-option>Atom</md-option>
+              <md-option>Pentium</md-option>
+              <md-option>Dual Core</md-option>
+              <md-option>Core 2 Duo</md-option>
+              <md-option>i3</md-option>
+              <md-option>i5</md-option>
+              <md-option>i7</md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Generation</label>
+            <md-select ng-model="user.PGen" value="md-option">
+              <md-option>1st</md-option>
+              <md-option>2nd</md-option>
+              <md-option>3rd</md-option>
+              <md-option>4th</md-option>
+              <md-option>5th</md-option>
+              <md-option>6th</md-option>
+              <md-option>7th</md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container flex-gt-sm="">
+            <label>Serial No.</label>
+            <input ng-model="user.Psn">
+          </md-input-container>
+          <md-input-container flex-gt-md="">
+          <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter Date"></md-datepicker>
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Disk Manufacturer</label>
+            <md-select ng-model="user.Hname">
+              <md-option>Seagate</md-option>
+              <md-option>Western Digital</md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Disk Type</label>
+            <md-select ng-model="user.Htype">
+              <md-option>HDD</md-option>
+              <md-option>SSD</md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Disk Size</label>
+            <md-select ng-model="user.Hsize" value="md-option">
+              <md-option>128 GB</md-option>
+              <md-option>256 GB</md-option>
+              <md-option>500 GB</md-option>
+              <md-option>1 TB</md-option>
+              <md-option>2 TB</md-option>
+              <md-option>3 TB</md-option>
+              <md-option>4 TB</md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container flex-gt-sm="">
+            <label>Serial No.</label>
+            <input ng-model="user.DSN">
+          </md-input-container>
+          <md-input-container flex-gt-md="">
+          <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter Date"></md-datepicker>
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container flex-gt-sm="">
+            <label>RAM Manufacturer</label>
+            <input ng-model="user.Rname">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>RAM Type</label>
+            <md-select ng-model="user.Htype">
+              <md-option>DDR1</md-option>
+              <md-option>DDR2</md-option>
+              <md-option>DDR3</md-option>
+              <md-option>DDR4</md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>RAM Size</label>
+            <md-select ng-model="user.Hsize" value="md-option">
+              <md-option>512 MB</md-option>
+              <md-option>1 GB</md-option>
+              <md-option>2 GB</md-option>
+              <md-option>4 GB</md-option>
+              <md-option>8 GB</md-option>
+              <md-option>16 GB</md-option>
+              <md-option>32 GB</md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container flex-gt-sm="">
+            <label>Serial No.</label>
+            <input ng-model="user.RSN">
+          </md-input-container>
+          <md-input-container flex-gt-md="">
+          <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter Date"></md-datepicker>
+          </md-input-container>
+        </div>
+      </form>
+    </div>
+  </md-content>
+
+        <!-- <md-input-container md-no-float="" class="md-block">
+          <input ng-model="user.address2" placeholder="Address 2">
+        </md-input-container>
+
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>City</label>
+            <input ng-model="user.city">
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>State</label>
+            <md-select ng-model="user.state">
+              <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                {{state.abbrev}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Postal Code</label>
+            <input name="postalCode" ng-model="user.postalCode" placeholder="12345" required="" ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+
+            <div ng-messages="userForm.postalCode.$error" role="alert" multiple="">
+              <div ng-message="required" class="my-message">You must supply a postal code.</div>
+              <div ng-message="pattern" class="my-message">That doesn't look like a valid postal
+                code.
+              </div>
+              <div ng-message="md-maxlength" class="my-message">
+                Don't use the long version silly...we don't need to be that specific...
+              </div>
+            </div>
+          </md-input-container>
+        </div> -->

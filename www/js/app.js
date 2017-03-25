@@ -39,7 +39,17 @@ imprint.config(function($stateProvider,$urlRouterProvider){
     url:'/about',
       templateUrl: 'views/about.html',
       controller:'AboutCtrl'
- });
+ })
+ .state('hwDetails', {
+   url:'/hwDetails',
+     templateUrl: 'views/hwDetails.html',
+     controller:'FillCtrl'
+})
+.state('autoFill', {
+  url:'/autoFill',
+    templateUrl: 'views/autoFill.html',
+    controller:'AutoFillCtrl'
+});
 
 
  $urlRouterProvider.otherwise("/welcome");

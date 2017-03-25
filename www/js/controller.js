@@ -5,11 +5,15 @@ angular.module('imprintControllers',[])
    }, 3000);
 })
 
-.controller('HomeCtrl',function(){
-
+.controller('HomeCtrl',function($scope,$state){
+  $scope.goToAbout=function(){
+    $state.go("main.about");
+  };
 })
-.controller('AddCtrl',function(){
-
+.controller('AddCtrl',function($scope,$state){
+  $scope.goToFill=function(){
+    $state.go("hwDetails");
+  };
 })
 .controller('ViewCtrl',function(){
 
@@ -19,4 +23,17 @@ angular.module('imprintControllers',[])
 })
 .controller('AboutCtrl',function(){
 
+})
+.controller('FillCtrl',function($scope,$state){
+  $scope.goToAdd=function(){
+    $state.go("main.add");
+  };
+  $scope.goToAuto=function(){
+    $state.go("autoFill");
+  };
+})
+.controller('AutoFillCtrl',function($scope,$state){
+  $scope.goToAdd=function(){
+    $state.go("main.add");
+  };
 });
