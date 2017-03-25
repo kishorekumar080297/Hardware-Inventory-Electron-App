@@ -307,7 +307,7 @@
 }
 .toolbar1{
   height: 8vh;
-  background-color:#2980b9;
+  background-color:#424242;
 }
 .container{
   top:0;
@@ -338,7 +338,7 @@
   font-size: 14px;
 }
 .btn1{
-  background-color:#651fff !important;
+  background-color:#42a5f5 !important;
   border-radius: 25px;
 }
 .tab1{

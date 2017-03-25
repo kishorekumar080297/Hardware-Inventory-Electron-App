@@ -1,7 +1,7 @@
 'use strict'
 
 var imprint=angular.module('imprint',['ui.router','ngAnimate','imprintControllers','ngMaterial']);
-imprint.config(function($stateProvider,$urlRouterProvider){
+imprint.config(function($stateProvider,$urlRouterProvider,$mdThemingProvider){
     $stateProvider
     .state('welcome', {
         url:'/welcome',
@@ -50,7 +50,9 @@ imprint.config(function($stateProvider,$urlRouterProvider){
     templateUrl: 'views/autoFill.html',
     controller:'AutoFillCtrl'
 });
-
+ $mdThemingProvider.theme('docs-dark', 'default')
+      .primaryPalette('light-blue')
+      .dark();
 
  $urlRouterProvider.otherwise("/welcome");
 })
