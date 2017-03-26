@@ -31,6 +31,14 @@ angular.module('imprintControllers',[])
   $scope.goToAuto=function(){
     $state.go("autoFill");
   };
+  $scope.goToHw2=function(){
+    $state.go("hwDetails2");
+  };
+})
+.controller('Fill2Ctrl',function($scope,$state){
+  $scope.goToHw1=function(){
+    $state.go("hwDetails");
+  };
 })
 .controller('AutoFillCtrl',function($scope,$state){
   $scope.goToAdd=function(){

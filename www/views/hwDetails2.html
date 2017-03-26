@@ -1,5 +1,5 @@
 <header class="toolbar1 toolbar-header">
-<md-button class="md-fab md-raised backBtn test-tooltip" aria-label="back" style="margin-left:4vh !important" ng-click="goToAdd()">
+<md-button class="md-fab md-raised backBtn test-tooltip" aria-label="back" style="margin-left:4vh !important" ng-click="goToHw1()">
   <a class="icon icon-reply"></a>
 </md-button>
 <h3 class="title pacific white" style="margin-top:-7vh;">Hardware Details</h3>
@@ -8,48 +8,23 @@
     <h3 class="title pacific white left">&emsp;&emsp;Enter your PC  Specifications in the below form </h3>
 
 </header>
-  <md-content md-theme="docs-dark">
-    <div>&emsp;
-      <md-input-container>
-        <label>PC Name</label>
-        <input ng-model="user.pcName">
-      </md-input-container>
-      <md-input-container flex-md="">
-      <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date"></md-datepicker>
-      </md-input-container>
-    </div>
-  </md-content>
-
   <md-content layout-padding="" md-theme="docs-dark">
     <div style="margin-top:-2vh !important;">
-      <form name="userForm">
-        <div layout-gt-xs="row">
-          <md-input-container class="md-block" flex-gt-xs="">
-            <label>PC Manufacturer</label>
-            <input ng-model="user.company" >
-          </md-input-container>
-
-        </div>
-
+      <form name="userForm2">
         <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm="">
-            <label>Processor Manufacturer</label>
-            <md-select ng-model="user.Pname">
-              <md-option>Intel</md-option>
-              <md-option>AMD</md-option>
-            </md-select>
+            <label>Motherboard Manufacturer</label>
+            <input ng-model="user.Mboard" >
           </md-input-container>
           <md-input-container class="md-block" flex-gt-sm="">
             <label>Type</label>
-            <md-select ng-model="user.PType" value="md-option">
-              <md-option>Celeron</md-option>
-              <md-option>Atom</md-option>
-              <md-option>Pentium</md-option>
-              <md-option>Dual Core</md-option>
-              <md-option>Core 2 Duo</md-option>
-              <md-option>i3</md-option>
-              <md-option>i5</md-option>
-              <md-option>i7</md-option>
+            <md-select ng-model="user.Mname">
+              <md-option>AT</md-option>
+              <md-option>ATX</md-option>
+              <md-option>LPX</md-option>
+              <md-option>BTX</md-option>
+              <md-option>Pico BTX</md-option>
+              <md-option>Mini ITX</md-option>
             </md-select>
           </md-input-container>
           <md-input-container class="md-block" flex-gt-sm="">
@@ -146,7 +121,7 @@
   </md-content>
   <div style="background-color:#01579b;height:15vh;">
 	<md-button class="md-raised md-primary btn1" style="color:#fff;margin-top:3vh;" ng-click="goToAuto()">To Update Automatically Click Here</md-button>
-	<md-button class="md-raised md-primary btn1" style="color:#fff;margin-top:3vh;margin-left:85vh;" ng-click="goToHw2()">Next&nbsp;<span class="icon icon-right" style="color:#fff !important;"></span></md-button>
+	<md-button class="md-raised md-primary btn1" style="color:#fff;margin-top:3vh;margin-left:85vh;" ng-click="goToAuto()">Submit</md-button>
    </div>
 
            \

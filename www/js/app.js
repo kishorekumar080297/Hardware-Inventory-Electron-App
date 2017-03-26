@@ -45,6 +45,11 @@ imprint.config(function($stateProvider,$urlRouterProvider,$mdThemingProvider){
      templateUrl: 'views/hwDetails.html',
      controller:'FillCtrl'
 })
+.state('hwDetails2', {
+  url:'/hwDetails2',
+    templateUrl: 'views/hwDetails2.html',
+    controller:'Fill2Ctrl'
+})
 .state('autoFill', {
   url:'/autoFill',
     templateUrl: 'views/autoFill.html',
