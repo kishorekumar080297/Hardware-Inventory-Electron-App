@@ -35,13 +35,13 @@ angular.module('imprintControllers',[])
     $state.go("hwDetails2");
   };
   $scope.showSimpleToast = function() {
-    $mdToast.show(
-      $mdToast.simple()
-        .textContent('PC information added Successfully!!')
-        .position('bottom left')
-        .hideDelay(3000)
-    );
-  };
+       $mdToast.show(
+         $mdToast.simple()
+         .textContent('Simple Toast!')
+         .position('bottom right')
+         .hideDelay(3000)
+       );
+     };
 })
 .controller('Fill2Ctrl',function($scope,$state){
   $scope.goToHw1=function(){
