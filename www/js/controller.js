@@ -24,7 +24,7 @@ angular.module('imprintControllers',[])
 .controller('AboutCtrl',function(){
 
 })
-.controller('FillCtrl',function($scope,$state){
+.controller('FillCtrl',function($scope,$state,$mdToast){
   $scope.goToAdd=function(){
     $state.go("main.add");
   };
@@ -33,6 +33,14 @@ angular.module('imprintControllers',[])
   };
   $scope.goToHw2=function(){
     $state.go("hwDetails2");
+  };
+  $scope.showSimpleToast = function() {
+    $mdToast.show(
+      $mdToast.simple()
+        .textContent('PC information added Successfully!!')
+        .position('bottom left')
+        .hideDelay(3000)
+    );
   };
 })
 .controller('Fill2Ctrl',function($scope,$state){

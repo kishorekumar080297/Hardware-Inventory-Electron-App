@@ -27,21 +27,9 @@
               <md-option>Mini ITX</md-option>
             </md-select>
           </md-input-container>
-          <md-input-container class="md-block" flex-gt-sm="">
-            <label>Generation</label>
-            <md-select ng-model="user.PGen" value="md-option">
-              <md-option>1st</md-option>
-              <md-option>2nd</md-option>
-              <md-option>3rd</md-option>
-              <md-option>4th</md-option>
-              <md-option>5th</md-option>
-              <md-option>6th</md-option>
-              <md-option>7th</md-option>
-            </md-select>
-          </md-input-container>
           <md-input-container flex-gt-sm="">
             <label>Serial No.</label>
-            <input ng-model="user.Psn">
+            <input ng-model="user.Msn">
           </md-input-container>
           <md-input-container flex-gt-md="">
           <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter Date"></md-datepicker>
@@ -49,30 +37,12 @@
         </div>
         <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm="">
-            <label>Disk Manufacturer</label>
-            <md-select ng-model="user.Hname">
-              <md-option>Seagate</md-option>
-              <md-option>Western Digital</md-option>
-            </md-select>
+            <label>Keyboard Manufacturer</label>
+            <input ng-model="user.Keyboard" >
           </md-input-container>
           <md-input-container class="md-block" flex-gt-sm="">
-            <label>Disk Type</label>
-            <md-select ng-model="user.Htype">
-              <md-option>HDD</md-option>
-              <md-option>SSD</md-option>
-            </md-select>
-          </md-input-container>
-          <md-input-container class="md-block" flex-gt-sm="">
-            <label>Disk Size</label>
-            <md-select ng-model="user.Hsize" value="md-option">
-              <md-option>128 GB</md-option>
-              <md-option>256 GB</md-option>
-              <md-option>500 GB</md-option>
-              <md-option>1 TB</md-option>
-              <md-option>2 TB</md-option>
-              <md-option>3 TB</md-option>
-              <md-option>4 TB</md-option>
-            </md-select>
+            <label>Model Number</label>
+            <input ng-model="user.Ksn" >
           </md-input-container>
           <md-input-container flex-gt-sm="">
             <label>Serial No.</label>
@@ -83,34 +53,51 @@
           </md-input-container>
         </div>
         <div layout-gt-sm="row">
-          <md-input-container flex-gt-sm="">
-            <label>RAM Manufacturer</label>
-            <input ng-model="user.Rname">
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Mouse Manufacturer</label>
+            <input ng-model="user.Mouse" >
           </md-input-container>
           <md-input-container class="md-block" flex-gt-sm="">
-            <label>RAM Type</label>
-            <md-select ng-model="user.Htype">
-              <md-option>DDR1</md-option>
-              <md-option>DDR2</md-option>
-              <md-option>DDR3</md-option>
-              <md-option>DDR4</md-option>
-            </md-select>
-          </md-input-container>
-          <md-input-container class="md-block" flex-gt-sm="">
-            <label>RAM Size</label>
-            <md-select ng-model="user.Hsize" value="md-option">
-              <md-option>512 MB</md-option>
-              <md-option>1 GB</md-option>
-              <md-option>2 GB</md-option>
-              <md-option>4 GB</md-option>
-              <md-option>8 GB</md-option>
-              <md-option>16 GB</md-option>
-              <md-option>32 GB</md-option>
-            </md-select>
+            <label>Model Number</label>
+            <input ng-model="user.Msn" >
           </md-input-container>
           <md-input-container flex-gt-sm="">
             <label>Serial No.</label>
-            <input ng-model="user.RSN">
+            <input ng-model="user.MSN">
+          </md-input-container>
+          <md-input-container flex-gt-md="">
+          <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter Date"></md-datepicker>
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Monitor</label>
+            <input ng-model="user.Monitor" >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Model Number</label>
+            <input ng-model="user.Msn" >
+          </md-input-container>
+          <md-input-container flex-gt-sm="">
+            <label>Serial No.</label>
+            <input ng-model="user.Dsn">
+          </md-input-container>
+          <md-input-container flex-gt-md="">
+          <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter Date"></md-datepicker>
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Printer Manufacturer</label>
+            <input ng-model="user.PrinManufacturer" >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Model Number</label>
+            <input ng-model="user.Printsn" >
+          </md-input-container>
+          <md-input-container flex-gt-sm="">
+            <label>Serial No.</label>
+            <input ng-model="user.Printsn">
           </md-input-container>
           <md-input-container flex-gt-md="">
           <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter Date"></md-datepicker>
@@ -121,7 +108,7 @@
   </md-content>
   <div style="background-color:#01579b;height:15vh;">
 	<md-button class="md-raised md-primary btn1" style="color:#fff;margin-top:3vh;" ng-click="goToAuto()">To Update Automatically Click Here</md-button>
-	<md-button class="md-raised md-primary btn1" style="color:#fff;margin-top:3vh;margin-left:85vh;" ng-click="goToAuto()">Submit</md-button>
+	<md-button class="md-raised md-primary btn1" style="color:#fff;margin-top:3vh;margin-left:85vh;" ng-click="showSimpleToast()">Submit</md-button>
    </div>
 
            \
