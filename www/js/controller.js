@@ -15,12 +15,12 @@ angular.module('imprintControllers',[])
     $state.go("hwDetails");
   };
 })
-.controller('ViewCtrl',function(){
-
-})
-.controller('UpdateCtrl',function(){
-
-})
+// .controller('ViewCtrl',function(){
+//
+// })
+// .controller('UpdateCtrl',function(){
+//
+// })
 .controller('AboutCtrl',function(){
 
 })

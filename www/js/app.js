@@ -24,16 +24,16 @@ imprint.config(function($stateProvider,$urlRouterProvider,$mdThemingProvider){
        templateUrl: 'views/add.html',
        controller:'AddCtrl'
    })
-   .state('main.view', {
-     url:'/view',
-       templateUrl: 'views/view.html',
-       controller:'ViewCtrl'
-      })
-  .state('main.update', {
-    url:'/update',
-      templateUrl: 'views/update.html',
-      controller:'UpdateCtrl'
- })
+ //   .state('main.view', {
+ //     url:'/view',
+ //       templateUrl: 'views/view.html',
+ //       controller:'ViewCtrl'
+ //      })
+ //  .state('main.update', {
+ //    url:'/update',
+ //      templateUrl: 'views/update.html',
+ //      controller:'UpdateCtrl'
+ // })
 
   .state('main.about', {
     url:'/about',
