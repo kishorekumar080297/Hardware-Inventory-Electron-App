@@ -8,7 +8,7 @@
     "test": "http-server ./www -o"
   },
 
-  "author": "kishorekumar,shakaleshwar,sathishkumar,meenakshi,oviya,amruthasridhar",
+  "author": "ranjithkumar,kishorekumar,shakaleshwar,sathishkumar,meenakshi,oviya,amruthasridhar",
   "license": "ISC",
   "devDependencies": {
     "electron": "^1.6.1"
