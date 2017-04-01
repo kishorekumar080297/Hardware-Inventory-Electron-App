@@ -116,25 +116,25 @@
          <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>Motherboard Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in boardDetails"><span><b>Product</b></span><span style="padding-left:27.5vh;">:</span>{{}}</td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in boardDetails"><span><b>Product</b></span><span style="padding-left:27.5vh;">:</span>{{x.uuid}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in boardDetails"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span>{{x.name}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in boardDetails"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span>{{x.description}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Serial Number</b></span><span style="padding-left:19.2vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in boardDetails"><span><b>Serial Number</b></span><span style="padding-left:19.2vh;">:</span>{{x.serialNumber}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Version</b></span><span style="padding-left:27.8vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in boardDetails"><span><b>Version</b></span><span style="padding-left:27.8vh;">:</span>{{x.version}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Model</b></span><span style="padding-left:29.7vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in boardDetails"><span><b>Model</b></span><span style="padding-left:29.7vh;">:</span>{{x.model}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in boardDetails"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span>{{x.manufacturer}}</td>
 
          </tr>
        </tdead>

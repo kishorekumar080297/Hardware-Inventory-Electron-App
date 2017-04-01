@@ -10,3 +10,4 @@ exports.storeDetail = function(req, res){
     res.status(200);
     res.send({status:"Success"});
 };
+ 

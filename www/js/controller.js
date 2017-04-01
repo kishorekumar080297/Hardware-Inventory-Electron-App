@@ -56,6 +56,11 @@ angular.module('imprintControllers',[])
       "systemName":"",
     },
   ]
+  $scope.boardDetails=[
+    {
+    
+    },
+  ]
 })
 .controller('UpdateCtrl',function(){
 
