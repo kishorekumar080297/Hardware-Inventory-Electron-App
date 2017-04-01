@@ -1,12 +1,6 @@
   <link rel="stylesheet" href="css/style.css">
-<!-- <h1 class="reem" style="margin-top:35vh;">Manage your hardware resources efficiently!!</h1>
-<br>
-<md-button class="md-raised md-primary btn1 center" ng-click="goToAbout()">Getting Started</md-button> -->
-<header class="toolbar1 toolbar-header">
-<h3 class="title center white">List of devices connected</h3>
-<div style="text-align:right;margin-top:-8vh;">
-  <span class="icon icon-bell" style="text-align:right !important;font-size:24px;padding-right:4vh !important;line-height:-2.5; !important"></span>
-</div>
+<header class="toolbar1 toolbar-header" style="height:6vh;background-color:#fff;">
+<h3 class="title center reem white" style="font-size:16px;line-height:3.1;color:#000;"><b>LIST OF DEVICES CONNECTED</b></h3>
 </header>
 <div>
   <!-- <md-card flex="30" class="cardw" ng-click="goToFill()" style="background-color:#f5f5f5 !important;">
@@ -25,39 +19,38 @@
          </md-card-title-text>
          <md-card-title-media>
            <div class="md-media-sm card-media"> -->
-           <md-toolbar class="md-table-toolbar md-default">
+           <!-- <md-toolbar class="md-table-toolbar md-default">
      <div class="md-toolbar-tools">
-       <span>Nutrition</span>
+       <span>List Of</span>
      </div>
-   </md-toolbar>
+   </md-toolbar> -->
 
    <!-- exact table from live demo -->
    <md-table-container>
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
-       <thead md-head md-order="query.order" md-on-reorder="getDesserts">
-         <tr md-row>
-           <th md-column md-order-by="nameToLower"><span>Dessert (100g serving)</span></th>
-           <th md-column md-numeric md-order-by="calories.value"><span>Calories</span></th>
-           <th md-column md-numeric>Fat (g)</th>
-           <th md-column md-numeric>Carbs (g)</th>
-           <th md-column md-numeric>Protein (g)</th>
-           <th md-column md-numeric>Sodium (mg)</th>
-           <th md-column md-numeric>Calcium (%)</th>
-           <th md-column md-numeric>Iron (%)</th>
+       <thead md-head md-order="" md-on-reorder="">
+         <tr md-row style="font-size:18px;;">
+           <th style="width:14vh;"><span  style="padding-left:5vh !important;"><b>System Name</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left:12vh;"><b>&emsp;UUID</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left: 6vh !important;width:8vh;"><b>IP address</b></span></th>
+           <th style="width:14vh;"><span style="padding-left:4vh;"><b>View</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left:3vh;"><b>Update</b></span></th>
          </tr>
        </thead>
-       <tbody md-body>
-         <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="dessert in desserts.data">
-           <td md-cell>{{dessert.name}}</td>
-           <td md-cell>{{dessert.calories.value}}</td>
-           <td md-cell>{{dessert.fat.value | number: 1}}</td>
-           <td md-cell>{{dessert.carbs.value}}</td>
-           <td md-cell>{{dessert.protein.value | number: 1}}</td>
-           <td md-cell>{{dessert.sodium.value}}</td>
-           <td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
-           <td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>
+       <thead md-head md-order="" md-on-reorder="">
+         <tr md-row style="font-size:18px;">
+           <th md-column md-order-by=""><span>PC-1</span></th>
+           <th md-column md-numeric md-order-by=""><span>ADFVFDD- 445454-SDSDA</span></th>
+           <th md-column md-numeric md-order-by=""><span>192.168.2.1</span></th>
+           <th style="width:14vh;">
+             <md-button class="md-raised md-primary">View</md-button>
+           </th>
+           <th style="width:14vh;">
+             <md-button class="md-raised md-primary">Update</md-button>
+           </th>
          </tr>
-       </tbody>
+       </thead>
+
      </table>
    </md-table-container>
 
@@ -67,8 +60,7 @@
          </md-card-title-media>
        </md-card-title>
        <md-card-actions layout="row" layout-align="end center">
-         <md-button class="md-raised md-primary">View</md-button>
-         <md-button class="md-raised md-primary">Update</md-button>
+
        </md-card-actions>
      </md-card>
    </div>

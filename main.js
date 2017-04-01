@@ -8,6 +8,7 @@ const BrowserWindow=electron.BrowserWindow;
 
 app.on('ready',function() {
     mainWindow=new BrowserWindow({
+      icon:'img/logo2.png',
       name:"Imprint",
       width:1024,
       height:768});
