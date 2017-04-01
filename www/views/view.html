@@ -6,35 +6,35 @@
 </header>
 <!-- <md-table-container>
   <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
-    <thead md-head md-order="" md-on-reorder="">
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>System Name</b></span></th>
+    <tdead md-head md-order="" md-on-reorder="">
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>System Name</b></span></td>
 
       </tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>UUID</b></span></th>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>UUID</b></span></td>
 
       </tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>IP Address</b></span></th>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>IP Address</b></span></td>
 
       </tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Manufacture</b></span></th>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>Manufacture</b></span></td>
 
       </tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Version</b></span></th>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>Version</b></span></td>
 
       </tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Serial Number</b></span></th>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>Serial Number</b></span></td>
 
       </tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span>Proceesor</span></th>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span>Proceesor</span></td>
       </tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Disk</b></span></th></tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>RAM</b></span></th></tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Motherboard</b></span></th></tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Keyboard</b></span></th></tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Mouse</b></span></th></tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Monitor</b></span></th></tr>
-      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Printer</b></span></th></tr>
-    </thead>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>Disk</b></span></td></tr>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>RAM</b></span></td></tr>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>Motherboard</b></span></td></tr>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>Keyboard</b></span></td></tr>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>Mouse</b></span></td></tr>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>Monitor</b></span></td></tr>
+      <tr md-row style="font-size:18px;"><td style="width:14vh;"><span><b>Printer</b></span></td></tr>
+    </tdead>
   </table>
 </md-table-container> -->
 <div layout="column" flex style="overflow: scroll;height:100vh !important;background-color:#e0e0e0;">
@@ -43,28 +43,28 @@
   <md-card-title >
    <md-card-title-text>
      <!-- <span class="center white font">+</span> -->
-     <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="" id="sysDet">
-       <thead md-head md-order="" md-on-reorder="">
+     <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
+       <tdead md-head md-order="" md-on-reorder="" >
 
-         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><th style="width:14vh;"><span><b>System Details</b></span></th>
-
-         </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;" id="sysDet-uuid"><span><b>UUID</b></span><span style="padding-left:30vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>System Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;" id="sysDet-ipAddr"><span><b>IP Address</b></span><span style="padding-left:22.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in sysDet"><span><b>UUID</b></span><span style="padding-left:30vh;">: </span>{{y.uuid}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;" id="sysDet-manu"><span><b>Manufacturer</b></span><span style="padding-left:19.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in sysDet"><span><b>IP Address</b></span><span style="padding-left:22.5vh;">: </span>{{y.ip}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;" id="sysDet-ver"><span><b>Version</b></span><span style="padding-left:27vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in sysDet"><span><b>Manufacturer</b></span><span style="padding-left:19.5vh;">: </span>{{y.manufacturer}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;" id="sysDet-s.no"><span><b>Serial Number</b></span><span style="padding-left:18.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in sysDet"><span><b>Version</b></span><span style="padding-left:27vh;">: </span>{{y.version}}</td>
 
          </tr>
-       </thead>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in sysDet"><span><b>Serial Number</b></span><span style="padding-left:18.5vh;">: </span>{{y.serialNumber}}</td>
+
+         </tr>
+       </tdead>
      </table>
    </md-card-title-text>
  </md-card-title>
@@ -76,30 +76,30 @@
    <md-card-title-text>
      <!-- <span class="center white font">+</span> -->
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
-       <thead md-head md-order="" md-on-reorder="">
+       <tdead md-head md-order="" md-on-reorder="">
 
-         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><th style="width:14vh;"><span><b>Proceesor Details</b></span></th>
-
-         </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>Processor Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Description</b></span><span style="padding-left:22.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in procDetails"><span><b>Name</b></span><span style="padding-left:30vh;">: </span>{{y.name}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Processor ID</b></span><span style="padding-left:21vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in procDetails"><span><b>Description</b></span><span style="padding-left:22.5vh;">: </span>{{y.description}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in procDetails"><span><b>Processor ID</b></span><span style="padding-left:21vh;">: </span>{{y.processorID}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Device ID</b></span><span style="padding-left:25.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in procDetails"><span><b>System Name</b></span><span style="padding-left:20vh;">: </span>{{y.systemName}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in procDetails"><span><b>Device ID</b></span><span style="padding-left:25.5vh;">: </span>{{y.DeviceID}}</td>
 
          </tr>
-       </thead>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="y in procDetails"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">: </span>{{y.manufacturer}}</td>
+
+         </tr>
+       </tdead>
      </table>
    </md-card-title-text>
  </md-card-title>
@@ -111,33 +111,33 @@
    <md-card-title-text>
      <!-- <span class="center white font">+</span> -->
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
-       <thead md-head md-order="" md-on-reorder="">
+       <tdead md-head md-order="" md-on-reorder="">
 
-         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><th style="width:14vh;"><span><b>Motherboard Details</b></span></th>
-
-         </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Product</b></span><span style="padding-left:27.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>Motherboard Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in boardDetails"><span><b>Product</b></span><span style="padding-left:27.5vh;">:</span>{{}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Serial Number</b></span><span style="padding-left:19.2vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Version</b></span><span style="padding-left:27.8vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Serial Number</b></span><span style="padding-left:19.2vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Model</b></span><span style="padding-left:29.7vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Version</b></span><span style="padding-left:27.8vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Model</b></span><span style="padding-left:29.7vh;">:</span></td>
 
          </tr>
-       </thead>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></td>
+
+         </tr>
+       </tdead>
      </table>
    </md-card-title-text>
  </md-card-title>
@@ -148,28 +148,28 @@
   <md-card-title >
    <md-card-title-text>
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
-       <thead md-head md-order="" md-on-reorder="">
+       <tdead md-head md-order="" md-on-reorder="">
 
-         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><th style="width:14vh;"><span><b>GPU Details</b></span></th>
-
-         </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>GPU Details</b></span></td>
 
          </tr>
-
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span></th>
-
-         </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>PNP Device ID</b></span><span style="padding-left:19.3vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span></th>
+
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Adapater RAM</b></span><span style="padding-left:19.2vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>PNP Device ID</b></span><span style="padding-left:19.3vh;">:</span></td>
 
          </tr>
-       </thead>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span></td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Adapater RAM</b></span><span style="padding-left:19.2vh;">:</span></td>
+
+         </tr>
+       </tdead>
      </table>
    </md-card-title-text>
  </md-card-title>
@@ -180,27 +180,27 @@
   <md-card-title >
    <md-card-title-text>
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
-       <thead md-head md-order="" md-on-reorder="">
+       <tdead md-head md-order="" md-on-reorder="">
 
-         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><th style="width:14vh;"><span><b>Mouse Details</b></span></th>
-
-         </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Hardware ID</b></span><span style="padding-left:22.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>Mouse Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Description</b></span><span style="padding-left:23.2vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Hardware ID</b></span><span style="padding-left:22.5vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20.3vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Description</b></span><span style="padding-left:23.2vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.2vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20.3vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.2vh;">:</span></td>
 
          </tr>
-       </thead>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></td>
+
+         </tr>
+       </tdead>
      </table>
      <!-- <span class="center white font">+</span> -->
    </md-card-title-text>
@@ -212,27 +212,27 @@
   <md-card-title >
    <md-card-title-text>
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
-       <thead md-head md-order="" md-on-reorder="">
+       <tdead md-head md-order="" md-on-reorder="">
 
-         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><th style="width:14vh;"><span><b>Keyboard Details</b></span></th>
-
-         </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Hardware ID</b></span><span style="padding-left:22.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>Keyboard Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Description</b></span><span style="padding-left:23.2vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Hardware ID</b></span><span style="padding-left:22.5vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20.3vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Description</b></span><span style="padding-left:23.2vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.2vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20.3vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.2vh;">:</span></td>
 
          </tr>
-       </thead>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></td>
+
+         </tr>
+       </tdead>
      </table>
      <!-- <span class="center white font">+</span> -->
    </md-card-title-text>
@@ -244,30 +244,30 @@
   <md-card-title >
    <md-card-title-text>
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
-       <thead md-head md-order="" md-on-reorder="">
+       <tdead md-head md-order="" md-on-reorder="">
 
-         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><th style="width:14vh;"><span><b>CD-Drive Details</b></span></th>
-
-         </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>PNP Device ID</b></span><span style="padding-left:19.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>CD-Drive Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>PNP Device ID</b></span><span style="padding-left:19.5vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Hardware ID</b></span><span style="padding-left:22vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Hardware ID</b></span><span style="padding-left:22vh;">:</span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></th>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20vh;">:</span></td>
 
          </tr>
-       </thead>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></td>
+
+         </tr>
+       </tdead>
      </table>
    </md-card-title-text>
  </md-card-title>

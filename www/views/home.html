@@ -29,25 +29,21 @@
    <md-table-container>
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
        <thead md-head md-order="" md-on-reorder="">
-         <tr md-row style="font-size:18px;">
+         <tr md-row style="font-size:16px;">
            <th style="width:14vh;"><span  style="padding-left:5vh !important;"><b>System Name</b></span></th>
-           <th style="width:14vh;"><span  style="padding-left:12vh;"><b>&emsp;UUID</b></span></th>
-           <th style="width:14vh;"><span  style="padding-left: 6vh !important;width:8vh;"><b>IP address</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left:20vh;"><b>&emsp;UUID</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left: 2vh !important;width:8vh;"><b>IP address</b></span></th>
            <th style="width:14vh;"><span style="padding-left:4vh;"><b>View</b></span></th>
            <th style="width:14vh;"><span  style="padding-left:3vh;"><b>Update</b></span></th>
          </tr>
        </thead>
        <thead md-head md-order="" md-on-reorder="">
-         <tr md-row style="font-size:18px;">
-           <th md-column md-order-by="" ng-repeat=""><span>PC-1</span></th>
-           <th md-column md-numeric md-order-by=""><span>ADFVFDD- 445454-SDSDA</span></th>
-           <th md-column md-numeric md-order-by=""><span>192.168.2.1</span></th>
-           <th style="width:14vh;">
-             <md-button class="md-raised md-primary" ng-click="goToView()">View</md-button>
-           </th>
-           <th style="width:14vh;">
-             <md-button class="md-raised md-primary" ng-click="goToUpdate()">Update</md-button>
-           </th>
+         <tr md-row style="font-size:16px;" ng-repeat="x in clientDetails">
+           <td md-column md-order-by=""  ><span>{{x.systemName}}</span></td>
+           <td md-column md-numeric md-order-by=""><span>{{x.uuid}}</span></td>
+           <td md-column md-numeric md-order-by=""><span>{{x.ip}}</span></td>
+           <td style="width:14vh;"><md-button class="md-raised md-primary" ng-click="goToView(uuid)">View</md-button></td>
+           <td style="width:14vh;"><md-button class="md-raised md-primary" ng-click="goToUpdate()">Update</md-button></td>
          </tr>
        </thead>
 
