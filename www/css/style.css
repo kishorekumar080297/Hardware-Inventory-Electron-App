@@ -332,7 +332,7 @@
 }
 
 .icon{
-  color: #000 !important;
+  color: #fff !important;
   height: 10vh !important;
   padding-top: 3vh;
   font-size: 14px;
@@ -352,7 +352,7 @@
 }
 md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
     color: #000 !important;
-    background-color:#111 !important;
+    background-color:#fff !important;
 }
 #button{
   background-color: transparent;

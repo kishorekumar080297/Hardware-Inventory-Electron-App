@@ -1,5 +1,75 @@
-<div>
-<h1 class="reem" style="margin-top:35vh;">Manage your hardware resources efficiently!!</h1>
+  <link rel="stylesheet" href="css/style.css">
+<!-- <h1 class="reem" style="margin-top:35vh;">Manage your hardware resources efficiently!!</h1>
 <br>
-<md-button class="md-raised md-primary btn1 center" ng-click="goToAbout()">Getting Started</md-button>
+<md-button class="md-raised md-primary btn1 center" ng-click="goToAbout()">Getting Started</md-button> -->
+<header class="toolbar1 toolbar-header">
+<h3 class="title center white">List of devices connected</h3>
+<div style="text-align:right;margin-top:-8vh;">
+  <span class="icon icon-bell" style="text-align:right !important;font-size:24px;padding-right:4vh !important;line-height:-2.5; !important"></span>
+</div>
+</header>
+<div>
+  <!-- <md-card flex="30" class="cardw" ng-click="goToFill()" style="background-color:#f5f5f5 !important;">
+    <md-card-title >
+     <md-card-title-text>
+       <span class="center white font">+</span>
+     </md-card-title-text>
+   </md-card-title>
+ </md-card> -->
+ <div flex="100" layout="column">
+     <!-- <md-card style="background-color:#f5f5f5 !important;padding-left:4vh !important;padded-top:2vh;">
+       <md-card-title>
+         <md-card-title-text>
+           <span class="md-headline"></span>
+           <span class="md-subhead"></span>
+         </md-card-title-text>
+         <md-card-title-media>
+           <div class="md-media-sm card-media"> -->
+           <md-toolbar class="md-table-toolbar md-default">
+     <div class="md-toolbar-tools">
+       <span>Nutrition</span>
+     </div>
+   </md-toolbar>
+
+   <!-- exact table from live demo -->
+   <md-table-container>
+     <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+       <thead md-head md-order="query.order" md-on-reorder="getDesserts">
+         <tr md-row>
+           <th md-column md-order-by="nameToLower"><span>Dessert (100g serving)</span></th>
+           <th md-column md-numeric md-order-by="calories.value"><span>Calories</span></th>
+           <th md-column md-numeric>Fat (g)</th>
+           <th md-column md-numeric>Carbs (g)</th>
+           <th md-column md-numeric>Protein (g)</th>
+           <th md-column md-numeric>Sodium (mg)</th>
+           <th md-column md-numeric>Calcium (%)</th>
+           <th md-column md-numeric>Iron (%)</th>
+         </tr>
+       </thead>
+       <tbody md-body>
+         <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="dessert in desserts.data">
+           <td md-cell>{{dessert.name}}</td>
+           <td md-cell>{{dessert.calories.value}}</td>
+           <td md-cell>{{dessert.fat.value | number: 1}}</td>
+           <td md-cell>{{dessert.carbs.value}}</td>
+           <td md-cell>{{dessert.protein.value | number: 1}}</td>
+           <td md-cell>{{dessert.sodium.value}}</td>
+           <td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
+           <td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>
+         </tr>
+       </tbody>
+     </table>
+   </md-table-container>
+
+   <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{desserts.count}}" md-on-paginate="getDesserts" md-page-select></md-table-pagination>
+
+           </div>
+         </md-card-title-media>
+       </md-card-title>
+       <md-card-actions layout="row" layout-align="end center">
+         <md-button class="md-raised md-primary">View</md-button>
+         <md-button class="md-raised md-primary">Update</md-button>
+       </md-card-actions>
+     </md-card>
+   </div>
 </div>

@@ -1,4 +1,4 @@
-angular.module('imprintControllers',[])
+angular.module('imprintControllers',[require('angular-material-data-table')])
 .controller('Welcome',function($timeout,$location,$state){
   $timeout(function() {
      $state.go('main.home');

@@ -7,15 +7,18 @@
     "start": "electron .",
     "test": "http-server ./www -o"
   },
-
   "author": "ranjithkumar,kishorekumar,shakaleshwar,sathishkumar,meenakshi,oviya,amruthasridhar",
   "license": "ISC",
   "devDependencies": {
     "electron": "^1.6.1"
   },
   "dependencies": {
+    "angular": "1.2.5",
+    "angular-material-data-table": "^0.10.10",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
     "electron": "^1.6.1",
-    "nodemon": "^1.11.0",
-    "angular":"1.2.5"
-    }
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0"
+  }
 }
