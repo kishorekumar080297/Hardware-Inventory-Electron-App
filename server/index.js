@@ -41,6 +41,11 @@ app.post('/getDetails',function(req,res){
   res.send({status:"Success"});
 })
 
+app.get('/isAdmin', function(req,res){
+	res.status(200);
+	res.send({status:"Success",admin: true});
+});
+
 app.listen(3012, '0.0.0.0', function(){
 	console.log('Server listening on port 3012');
 });

@@ -1,27 +1,96 @@
-<!-- <div>
-<h1 class="reem">Take a look at your hardware resources!!</h1>
-</div> -->
+<header class="toolbar1 toolbar-header" style="background-color:#651fff;">
+<md-button class="md-fab md-raised backBtn test-tooltip" aria-label="back" style="margin-left:4vh !important;" ng-click="goToHome()">
+  <a class="icon icon-reply" style="color:#000 !important;"></a>
+</md-button>
+<h3 class="title reem white" style="margin-top:-7vh;">Hardware Details</h3>
+</header>
+<!-- <md-table-container>
+  <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+    <thead md-head md-order="" md-on-reorder="">
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>System Name</b></span></th>
 
-<!-- <div layout="row">
-  <md-card flex="30" class="cardw" ng-click="goToFill()">
-    <md-card-title >
-     <md-card-title-text>
-       <span class="center white font" style="font-size:24px !important;">PC - 1</span>
-     </md-card-title-text>
-   </md-card-title>
-   <md-card-actions layout="row" layout-align="end center">
-    <md-button style="color:white">View</md-button>
-    <md-button style="color:white">Update</md-button>
-  </md-card-actions>
- </md-card>
- <md-card flex="30" class="cardw" ng-click="goToFill()">
-   <md-card-title >
-    <md-card-title-text>
-      <span class="center white font" style="font-size:24px !important;">PC - 2</span>
-    </md-card-title-text>
-  </md-card-title>
-   <md-button flex="30vh"style="color:white;background-color:#1e88e5;">View</md-button>
-   <md-button style="color:white;background-color:#1e88e5;">Update</md-button>
+      </tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>UUID</b></span></th>
 
+      </tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>IP Address</b></span></th>
+
+      </tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Manufacture</b></span></th>
+
+      </tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Version</b></span></th>
+
+      </tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Serial Number</b></span></th>
+
+      </tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span>Proceesor</span></th>
+      </tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Disk</b></span></th></tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>RAM</b></span></th></tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Motherboard</b></span></th></tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Keyboard</b></span></th></tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Mouse</b></span></th></tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Monitor</b></span></th></tr>
+      <tr md-row style="font-size:18px;"><th style="width:14vh;"><span><b>Printer</b></span></th></tr>
+    </thead>
+  </table>
+</md-table-container> -->
+<md-content scroll="true">
+<div class="row">
+<md-card flex="100" style="background-color:#fff;" class="cardw" class="col m4">
+  <md-card-title >
+   <md-card-title-text>
+     <!-- <span class="center white font">+</span> -->
+     <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
+       <thead md-head md-order="" md-on-reorder="">
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>System Name</b></span></th>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>UUID</b></span></th>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>IP Address</b></span></th>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Manufacture</b></span></th>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><th style="width:14vh;"><span><b>Version</b></span></th>
+
+         </tr>
+       </thead>
+     </table>
+   </md-card-title-text>
+ </md-card-title>
 </md-card>
-</div> -->
+</div>
+<div class="row">
+<md-card flex="100" style="background-color:#fff;" class="cardw" class="col m4">
+  <md-card-title >
+   <md-card-title-text>
+     <span class="center white font">+</span>
+   </md-card-title-text>
+ </md-card-title>
+</md-card>
+</div>
+<div class="row">
+<md-card flex="100" style="background-color:#fff;" class="cardw">
+  <md-card-title >
+   <md-card-title-text>
+     <span class="center white font">+</span>
+   </md-card-title-text>
+ </md-card-title>
+</md-card>
+</div>
+<div class="row">
+<md-card flex="100" style="background-color:#fff;" class="cardw">
+  <md-card-title >
+   <md-card-title-text>
+     <span class="center white font">+</span>
+   </md-card-title-text>
+ </md-card-title>
+</md-card>
+</div>
+</md-content>

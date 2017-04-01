@@ -40,6 +40,16 @@ imprint.config(function($stateProvider,$urlRouterProvider,$mdThemingProvider){
       templateUrl: 'views/about.html',
       controller:'AboutCtrl'
  })
+ .state('view', {
+     url:'/view',
+     templateUrl: 'views/view.html',
+     controller:'ViewCtrl'
+})
+.state('update', {
+    url:'/update',
+    templateUrl: 'views/update.html',
+    controller:'UpdateCtrl'
+})
  .state('hwDetails', {
    url:'/hwDetails',
      templateUrl: 'views/hwDetails.html',

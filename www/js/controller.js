@@ -6,8 +6,14 @@ angular.module('imprintControllers',[])
 })
 
 .controller('HomeCtrl',function($scope,$state){
-  $scope.goToAbout=function(){
-    $state.go("main.about");
+  // $scope.goToAbout=function(){
+  //   $state.go("main.about");
+  // };
+  $scope.goToView=function(){
+    $state.go("view");
+  };
+  $scope.goToUpdate=function(){
+    $state.go("update");
   };
 })
 .controller('AddCtrl',function($scope,$state){
@@ -15,12 +21,14 @@ angular.module('imprintControllers',[])
     $state.go("hwDetails");
   };
 })
-// .controller('ViewCtrl',function(){
-//
-// })
-// .controller('UpdateCtrl',function(){
-//
-// })
+.controller('ViewCtrl',function($scope,$state){
+  $scope.goToHome=function(){
+    $state.go('main.home');
+  }
+})
+.controller('UpdateCtrl',function(){
+
+})
 .controller('AboutCtrl',function(){
 
 })
@@ -34,14 +42,6 @@ angular.module('imprintControllers',[])
   $scope.goToHw2=function(){
     $state.go("hwDetails2");
   };
-  $scope.showSimpleToast = function() {
-       $mdToast.show(
-         $mdToast.simple()
-         .textContent('Simple Toast!')
-         .position('bottom right')
-         .hideDelay(3000)
-       );
-     };
 })
 .controller('Fill2Ctrl',function($scope,$state){
   $scope.goToHw1=function(){

@@ -29,7 +29,7 @@
    <md-table-container>
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
        <thead md-head md-order="" md-on-reorder="">
-         <tr md-row style="font-size:18px;;">
+         <tr md-row style="font-size:18px;">
            <th style="width:14vh;"><span  style="padding-left:5vh !important;"><b>System Name</b></span></th>
            <th style="width:14vh;"><span  style="padding-left:12vh;"><b>&emsp;UUID</b></span></th>
            <th style="width:14vh;"><span  style="padding-left: 6vh !important;width:8vh;"><b>IP address</b></span></th>
@@ -43,10 +43,10 @@
            <th md-column md-numeric md-order-by=""><span>ADFVFDD- 445454-SDSDA</span></th>
            <th md-column md-numeric md-order-by=""><span>192.168.2.1</span></th>
            <th style="width:14vh;">
-             <md-button class="md-raised md-primary">View</md-button>
+             <md-button class="md-raised md-primary" ng-click="goToView()">View</md-button>
            </th>
            <th style="width:14vh;">
-             <md-button class="md-raised md-primary">Update</md-button>
+             <md-button class="md-raised md-primary" ng-click="goToUpdate()">Update</md-button>
            </th>
          </tr>
        </thead>
