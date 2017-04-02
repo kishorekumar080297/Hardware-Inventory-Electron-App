@@ -30,18 +30,18 @@
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
        <thead md-head md-order="" md-on-reorder="">
          <tr md-row style="font-size:16px;">
-           <th style="width:14vh;"><span  style="padding-left:5vh !important;"><b>Manufacturer</b></span></th>
-           <th style="width:14vh;"><span  style="padding-left:20vh;"><b>&emsp;UUID</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left:3vh !important;"><b>Manufacturer</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left:5vh;margin-left:-1vh"><b>UUID</b></span></th>
            <th style="width:14vh;"><span  style="padding-left: 2vh !important;width:8vh;"><b>IP address</b></span></th>
            <th style="width:14vh;"><span  style="padding-left: 2vh !important;width:8vh;"><b>Serial Number</b></span></th>
            <th style="width:14vh;"><span  style="padding-left: 2vh !important;width:8vh;"><b>Version</b></span></th>
-           <th style="width:14vh;"><span style="padding-left:4vh;"><b>View</b></span></th>
-           <th style="width:14vh;"><span  style="padding-left:3vh;"><b>Update</b></span></th>
+           <th style="width:14vh;"><span style="padding-left:2vh;"><b>View</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left:1vh;"><b>Update</b></span></th>
          </tr>
        </thead>
        <thead md-head md-order="" md-on-reorder="">
          <tr md-row style="font-size:16px;" ng-repeat="x in sys_det_data">
-           <td md-column md-order-by=""  ><span>{{x.manufacturer}}</span></td>
+           <td md-column md-order-by=""  ><span>{{x.system_details.manufacturer}}</span></td>
            <td md-column md-numeric md-order-by=""><span>{{x.uuid}}</span></td>
            <td md-column md-numeric md-order-by=""><span>{{x.ip}}</span></td>
            <td md-column md-numeric md-order-by=""><span>{{x.serialNumber}}</span></td>
