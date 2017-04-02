@@ -1,3 +1,25 @@
+var _ = require('underscore');
+
+var socket = io.connect('http://localhost:3012');
+
+console.log(socket)
+
+socket.on('connect', function() {
+  alert("CONNECTED")
+});
+
+socket.on('message', function(message){
+    //content.prepend(message + '<br />');
+    alert(message)
+});
+
+socket.on('disconnect', function() {
+    console.log('disconnected');
+    content.html("<b>Disconnected!</b>");
+});
+
+socket.connect();
+
 angular.module('imprintControllers',[])
 .controller('Welcome',function($timeout,$location,$state){
   $timeout(function() {
@@ -9,13 +31,13 @@ angular.module('imprintControllers',[])
   // $scope.goToAbout=function(){
   //   $state.go("main.about");
   // };
+  var res;
   $http.get("http://localhost:3012/getAll")
       .success(function(response) {
         $scope.sys_det_data = [];
-        // console.log(response[0]);
-        // var preTemp=JSON.stringify(response[0]);
+        var preTemp=JSON.stringify(response[0]);
 
-        $scope.temp = response[0];
+        $scope.temp = JSON.parse(preTemp)
 
         // console.log($scope.temp1);
       //   if(response[0].length>1){
@@ -24,22 +46,38 @@ angular.module('imprintControllers',[])
       //   });
       // }
       // else{
+      // console.log(response[0]);
       if(response[0].length==1){
          $scope.uuid = $scope.temp.system_details['uuid'];
          $scope.sys_det_data.push($scope.temp.system_details);
+         console.log($scope.sys_det_data)
         //  console.log($scope.sys_det_data);
+        // console.log(response[0]);
        }
        else{
          $scope.sys_det_data = [];
-         response[0].forEach(function(item){
-          $scope.sys_det_data.push(item);
-          // console.log($scope.sys_det_data);
-         });
-         console.log($scope.sys_det_data);
+         res = response[0];
+         $scope.sys_det_data = _.chain(response[0]).map(function(d){
+           return d['system_details']
+         }).value();
+         console.log($scope.sys_det_data)
+        //  response[0].forEach(function(item){
+        //   $scope.sys_det_data.push(item.sys_det_data);
+        //   console.log($scope.sys_det_data)
+        //   // console.log($scope.sys_det_data);
+        //  });
+        //  console.log($scope.sys_det_data);
        }
       // }
+
     });
-  $scope.goToView=function(){
+  $scope.goToView=function(uuid){
+    var data = _.filter(res, function(f){
+      return f['system_details']['uuid'] == uuid;
+    })
+
+    var storage = window.localStorage;
+    storage.setItem('data',JSON.stringify(data[0]));
     $state.go("view");
   };
   $scope.goToUpdate=function(){
@@ -68,25 +106,29 @@ angular.module('imprintControllers',[])
     $state.go('main.home');
   }
 
+  $scope.data = JSON.parse(localStorage.getItem('data'));
+  console.log($scope.data)
+
+  $http.get("http://localhost:3012/getAll")
   $scope.sysDet=[
-  //   {
-  //   "uuid":"3CACEA81-5676-11E4-9F6E-68F7280FE6CF",
-  //   "ip":"192.168.2.2",
-  //   "manufacturer":"LENOVO",
-  //   "version":"Lenovo Z50-70",
-  //   "serialNumber":"1040295903378"
-  // },
+    {
+    "uuid":"",
+    "ip":"",
+    "manufacturer":"",
+    "version":"",
+    "serialNumber":""
+  },
 
 ]
   $scope.procDetails=[
-    // {
-    //   "name":"Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz",
-    //   "description":"Intel64 Family 6 Model 69 Stepping 1",
-    //   "DeviceID":"",
-    //   "manufacturer":"",
-    //   "processorID":"",
-    //   "systemName":"",
-    // },
+    {
+      "name":"Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz",
+      "description":"Intel64 Family 6 Model 69 Stepping 1",
+      "DeviceID":"",
+      "manufacturer":"",
+      "processorID":"",
+      "systemName":"",
+    },
   ]
   $scope.boardDetails=[
     {

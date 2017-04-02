@@ -3,7 +3,10 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const cors = require('cors');
+
 const app = express();
+const server = require('http').createServer(app);
+const io = require('socket.io').listen(server);
 
 const storeDetailController = require('./app/controller/storeDetails');
 
@@ -24,11 +27,11 @@ app.get('/', function(req, res){
 });
 
 //Get details from the client
-app.post('/getDetails', storeDetailController.storeDetail);
+app.post('/getDetails', storeDetailController(server).storeDetail);
 
-app.get('/getDetails/:uuid', storeDetailController.getDetail);
+app.get('/getDetails/:uuid', storeDetailController(server).getDetail);
 
-app.get('/getAll', storeDetailController.getAll);
+app.get('/getAll', storeDetailController(server).getAll);
 
 ///Check if admin
 app.get('/isAdmin', function(req,res){
@@ -37,6 +40,6 @@ app.get('/isAdmin', function(req,res){
 });
 
 //Server launch
-app.listen(3012, '0.0.0.0', function(){
+server.listen(3012, '0.0.0.0', function(){
 	console.log('Server listening on port 3012');
 });

@@ -41,12 +41,12 @@
        </thead>
        <thead md-head md-order="" md-on-reorder="">
          <tr md-row style="font-size:16px;" ng-repeat="x in sys_det_data">
-           <td md-column md-order-by=""  ><span>{{x.system_details.manufacturer}}</span></td>
+           <td md-column md-order-by=""  ><span>{{x.manufacturer}}</span></td>
            <td md-column md-numeric md-order-by=""><span>{{x.uuid}}</span></td>
            <td md-column md-numeric md-order-by=""><span>{{x.ip}}</span></td>
            <td md-column md-numeric md-order-by=""><span>{{x.serialNumber}}</span></td>
            <td md-column md-numeric md-order-by=""><span>{{x.version}}</span></td>
-           <td style="width:14vh;"><md-button class="md-raised md-primary" ng-click="goToView(uuid)" data-mg-model="uuid">View</md-button></td>
+           <td style="width:14vh;"><md-button class="md-raised md-primary" ng-click="goToView(x.uuid)" data-mg-model="uuid">View</md-button></td>
            <td style="width:14vh;"><md-button class="md-raised md-primary" ng-click="goToUpdate()">Update</md-button></td>
          </tr>
        </thead>
