@@ -104,57 +104,20 @@ angular.module('imprintControllers',[])
 .controller('ViewCtrl',function($scope,$state,$http){
   $scope.goToHome=function(){
     $state.go('main.home');
-  }
+  };
 
   $scope.data = JSON.parse(localStorage.getItem('data'));
-  console.log($scope.data)
-
-  $http.get("http://localhost:3012/getAll")
-  $scope.sysDet=[
-    {
-    "uuid":"",
-    "ip":"",
-    "manufacturer":"",
-    "version":"",
-    "serialNumber":""
-  },
-
-]
-  $scope.procDetails=[
-    {
-      "name":"Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz",
-      "description":"Intel64 Family 6 Model 69 Stepping 1",
-      "DeviceID":"",
-      "manufacturer":"",
-      "processorID":"",
-      "systemName":"",
-    },
-  ]
-  $scope.boardDetails=[
-    {
-
-    },
-  ]
-  $scope.gpuDetails=[
-    {
-
-    },
-  ]
-  $scope.mouseDetails=[
-    {
-
-    },
-  ]
-  $scope.keyboardDetails=[
-    {
-
-    },
-  ]
-  $scope.driveDetails=[
-    {
-
-    },
-  ]
+  console.log($scope.data);
+  $scope.sysDet = [$scope.data['system_details']];
+  $scope.procDetails = [$scope.data.processor_details[0]];
+  $scope.boardDetails = [$scope.data.motherboard_details[0]];
+  $scope.gpuDetails = [$scope.data.gpu_details[0]];
+  $scope.mouseDetails = [$scope.data.mouse_details[0]];
+  $scope.keyboardDetails = [$scope.data.keyboard_details[0]];
+  $scope.driveDetails = [$scope.data.cd_drive_details[0]];
+  $scope.ramDetails = [$scope.data.RAM_details[0]];
+  $scope.harddiskDetails = [$scope.data.hard_disk_details[0]];
+  // $scope.sysDet = [$scope.data['']];
 })
 .controller('UpdateCtrl',function(){
 

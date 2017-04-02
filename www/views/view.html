@@ -249,22 +249,84 @@
          <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>CD-Drive Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in driveDetails"><span><b>PNP Device ID</b></span><span style="padding-left:19.5vh;">: </span>{{a.pnpDeviceID}}</td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in driveDetails"><span><b>PNP Device ID</b></span><span style="padding-left:19.5vh;">: </span>{{z.pnpDeviceID}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in drivedDetails"><span><b>Name</b></span><span style="padding-left:30.3vh;">: </span>{{a.name}}</td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in drivedDetails"><span><b>Name</b></span><span style="padding-left:30.3vh;">: </span>{{z.name}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>Description</b></span><span style="padding-left:22.8vh;">: </span>{{a.description}}</td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>Description</b></span><span style="padding-left:22.8vh;">: </span>{{z.description}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>Hardware ID</b></span><span style="padding-left:22vh;">: </span>{{a.hardwareID}}</td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>Hardware ID</b></span><span style="padding-left:22vh;">: </span>{{z.hardwareID}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>System Name</b></span><span style="padding-left:20vh;">: </span>{{a.systemName}}</td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>System Name</b></span><span style="padding-left:20vh;">: </span>{{z.systemName}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">: </span>{{a.manufacturer}}</td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">: </span>{{z.manufacturer}}</td>
+
+         </tr>
+       </tdead>
+     </table>
+   </md-card-title-text>
+ </md-card-title>
+</md-card>
+</div>
+<div class="row">
+<md-card flex="100" style="background-color:#fff;" class="cardw">
+  <md-card-title >
+   <md-card-title-text>
+     <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
+       <tdead md-head md-order="" md-on-reorder="">
+
+         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>RAM Details</b></span></td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in ramDetails"><span><b>Name</b></span><span style="padding-left:29.5vh;">: </span>{{z.name}}</td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in ramDetails"><span><b>Manufacturer</b></span><span style="padding-left:21.3vh;">: </span>{{z.manufacturer}}</td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in ramDetails"><span><b>Serial Number</b></span><span style="padding-left:20.8vh;">: </span>{{z.serialNumber}}</td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in ramDetails"><span><b>Capacity</b></span><span style="padding-left:27vh;">: </span>{{z.capaity}} KB</td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in ramDetails"><span><b>Description</b></span><span style="padding-left:25vh;">: </span>{{z.description}}</td>
+
+         </tr>
+       </tdead>
+     </table>
+   </md-card-title-text>
+ </md-card-title>
+</md-card>
+</div>
+<div class="row">
+<md-card flex="100" style="background-color:#fff;" class="cardw">
+  <md-card-title >
+   <md-card-title-text>
+     <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
+       <tdead md-head md-order="" md-on-reorder="">
+
+         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>Hard Disk Details</b></span></td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in harddiskDetails"><span><b>Name</b></span><span style="padding-left:29.5vh;">: </span>{{z.name}}</td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in harddiskDetails"><span><b>Manufacturer</b></span><span style="padding-left:21.3vh;">: </span>{{z.manufacturer}}</td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in harddiskDetails"><span><b>Description</b></span><span style="padding-left:20.8vh;">: </span>{{z.description}}</td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in harddiskDetails"><span><b>Capacity</b></span><span style="padding-left:27vh;">: </span>{{z.size}} KB</td>
+
+         </tr>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in harddiskDetails"><span><b>Device ID</b></span><span style="padding-left:25vh;">: </span>{{z.deviceID}}</td>
 
          </tr>
        </tdead>

@@ -19,9 +19,13 @@ var storeDetail = function(req, res){
 	var uuid = hardware_data.system_details['uuid'];
 	// console.log(hardware_data);
   var old = client.get(uuid);
+  console.log(hardware_data);
+  console.log('-------------------------------------------------------------------');
+  var old;
+  console.log(old);
   if(!_.isEqual(old, hardware_data)) {
     // TRIGGER NOTIFICATION
-    console.log("CHANGED")
+    console.log("CHANGED");
      client.emit("message","HARDWARE CHANGED");
   }
   client.set(uuid, JSON.stringify(hardware_data));
