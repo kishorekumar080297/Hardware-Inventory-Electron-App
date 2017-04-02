@@ -153,20 +153,20 @@
          <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>GPU Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in gpuDetails"><span><b>System Name</b></span><span style="padding-left:20vh;">:</span>{{x.systemName}}</td>
 
          </tr>
 
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in gpuDetails"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span>{{x.description}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>PNP Device ID</b></span><span style="padding-left:19.3vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in gpuDetails"><span><b>PNP Device ID</b></span><span style="padding-left:19.3vh;">:</span>{{x.pnpDeviceID}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in gpuDetails"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span>{{x.name}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Adapater RAM</b></span><span style="padding-left:19.2vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="x in gpuDetails"><span><b>Adapater RAM</b></span><span style="padding-left:19.2vh;">:</span>{{x.adapterRAM}}</td>
 
          </tr>
        </tdead>
@@ -185,19 +185,19 @@
          <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>Mouse Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Hardware ID</b></span><span style="padding-left:22.5vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in mouseDetails"><span><b>Hardware ID</b></span><span style="padding-left:22.5vh;">: </span>{{z.hardwareID}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Description</b></span><span style="padding-left:23.2vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in mouseDetails"><span><b>Description</b></span><span style="padding-left:23.2vh;">: </span>{{z.description}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20.3vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in mouseDetails"><span><b>System Name</b></span><span style="padding-left:20.3vh;">: </span>{{z.systemName}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.2vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in mouseDetails"><span><b>Name</b></span><span style="padding-left:30.2vh;">:</span>{{z.name}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in mouseDetails"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">: </span>{{z.manufacturer}}</td>
 
          </tr>
        </tdead>
@@ -214,22 +214,22 @@
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise" style="">
        <tdead md-head md-order="" md-on-reorder="">
 
-         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>Keyboard Details</b></span></td>
+         <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;" ><td style="width:14vh;"><span><b>Keyboard Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Hardware ID</b></span><span style="padding-left:22.5vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="a in keyboardDetails"><span><b>Hardware ID</b></span><span style="padding-left:22.5vh;">: </span>{{z.hardwareID}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Description</b></span><span style="padding-left:23.2vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in keyboardDetails"><span><b>Description</b></span><span style="padding-left:23.2vh;">: </span>{{z.description}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20.3vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in keyboardDetails"><span><b>System Name</b></span><span style="padding-left:20.3vh;">: </span>{{z.systemName}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.2vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in keyboardDetails"><span><b>Name</b></span><span style="padding-left:30.2vh;">: </span>{{z.name}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in keyboardDetails"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">: </span>{{z.manufacturer}}</td>
 
          </tr>
        </tdead>
@@ -249,22 +249,22 @@
          <tr md-row style="font-size:18px;background-color:#eeeeee !important;text-align:center;"><td style="width:14vh;"><span><b>CD-Drive Details</b></span></td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>PNP Device ID</b></span><span style="padding-left:19.5vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in driveDetails"><span><b>PNP Device ID</b></span><span style="padding-left:19.5vh;">: </span>{{a.pnpDeviceID}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Name</b></span><span style="padding-left:30.3vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"  ng-repeat="z in drivedDetails"><span><b>Name</b></span><span style="padding-left:30.3vh;">: </span>{{a.name}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Description</b></span><span style="padding-left:22.8vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>Description</b></span><span style="padding-left:22.8vh;">: </span>{{a.description}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Hardware ID</b></span><span style="padding-left:22vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>Hardware ID</b></span><span style="padding-left:22vh;">: </span>{{a.hardwareID}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>System Name</b></span><span style="padding-left:20vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>System Name</b></span><span style="padding-left:20vh;">: </span>{{a.systemName}}</td>
 
          </tr>
-         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">:</span></td>
+         <tr md-row style="font-size:18px;background-color:#fff !important;"><td style="width:14vh;" ng-repeat="z in driveDetails"><span><b>Manufacturer</b></span><span style="padding-left:20.5vh;">: </span>{{a.manufacturer}}</td>
 
          </tr>
        </tdead>

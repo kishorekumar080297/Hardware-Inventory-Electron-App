@@ -30,34 +30,30 @@
      <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
        <thead md-head md-order="" md-on-reorder="">
          <tr md-row style="font-size:16px;">
-           <th style="width:14vh;"><span  style="padding-left:5vh !important;"><b>System Name</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left:5vh !important;"><b>Manufacturer</b></span></th>
            <th style="width:14vh;"><span  style="padding-left:20vh;"><b>&emsp;UUID</b></span></th>
            <th style="width:14vh;"><span  style="padding-left: 2vh !important;width:8vh;"><b>IP address</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left: 2vh !important;width:8vh;"><b>Serial Number</b></span></th>
+           <th style="width:14vh;"><span  style="padding-left: 2vh !important;width:8vh;"><b>Version</b></span></th>
            <th style="width:14vh;"><span style="padding-left:4vh;"><b>View</b></span></th>
            <th style="width:14vh;"><span  style="padding-left:3vh;"><b>Update</b></span></th>
          </tr>
        </thead>
        <thead md-head md-order="" md-on-reorder="">
-         <tr md-row style="font-size:16px;" ng-repeat="x in clientDetails">
-           <td md-column md-order-by=""  ><span>{{x.systemName}}</span></td>
+         <tr md-row style="font-size:16px;" ng-repeat="x in sys_det_data">
+           <td md-column md-order-by=""  ><span>{{x.manufacturer}}</span></td>
            <td md-column md-numeric md-order-by=""><span>{{x.uuid}}</span></td>
            <td md-column md-numeric md-order-by=""><span>{{x.ip}}</span></td>
-           <td style="width:14vh;"><md-button class="md-raised md-primary" ng-click="goToView(uuid)">View</md-button></td>
+           <td md-column md-numeric md-order-by=""><span>{{x.serialNumber}}</span></td>
+           <td md-column md-numeric md-order-by=""><span>{{x.version}}</span></td>
+           <td style="width:14vh;"><md-button class="md-raised md-primary" ng-click="goToView(uuid)" data-mg-model="uuid">View</md-button></td>
            <td style="width:14vh;"><md-button class="md-raised md-primary" ng-click="goToUpdate()">Update</md-button></td>
          </tr>
        </thead>
 
      </table>
    </md-table-container>
-
-   <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{desserts.count}}" md-on-paginate="getDesserts" md-page-select></md-table-pagination>
+<!--
+   <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{desserts.count}}" md-on-paginate="getDesserts" md-page-select></md-table-pagination> -->
 
            </div>
-         </md-card-title-media>
-       </md-card-title>
-       <md-card-actions layout="row" layout-align="end center">
-
-       </md-card-actions>
-     </md-card>
-   </div>
-</div>

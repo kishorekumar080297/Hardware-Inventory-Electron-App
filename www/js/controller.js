@@ -5,10 +5,21 @@ angular.module('imprintControllers',[])
    }, 3000);
 })
 
-.controller('HomeCtrl',function($scope,$state){
+.controller('HomeCtrl',function($scope,$state, $http){
   // $scope.goToAbout=function(){
   //   $state.go("main.about");
   // };
+  $http.get("http://localhost:3012/getAll")
+      .success(function(response) {
+        $scope.sys_det_data = [];
+        $scope.temp = JSON.parse(response[0]);
+        // $scope.temp.forEach(function(eachItem){
+        //     $scope.sys_det_data.push(eachItem.system_details);
+        // });
+         $scope.uuid = $scope.temp.system_details['uuid'];
+         $scope.sys_det_data.push($scope.temp.system_details);
+      });
+
   $scope.goToView=function(){
     $state.go("view");
   };
@@ -33,10 +44,20 @@ angular.module('imprintControllers',[])
     $state.go("hwDetails");
   };
 })
-.controller('ViewCtrl',function($scope,$state){
+.controller('ViewCtrl',function($scope,$state,$http){
   $scope.goToHome=function(){
     $state.go('main.home');
   }
+  $http.get("http://localhost:3012/getAll")
+      .success(function(response) {
+        $scope.sys_det_data = [];
+        $scope.temp = JSON.parse(response[0]);
+        // $scope.temp.forEach(function(eachItem){
+        //     $scope.sys_det_data.push(eachItem.system_details);
+        // });
+         $scope.uuid = $scope.temp.system_details['uuid'];
+         $scope.sys_det_data.push($scope.temp.system_details);
+      });
   $scope.sysDet=[
     {
     "uuid":"3CACEA81-5676-11E4-9F6E-68F7280FE6CF",
@@ -58,7 +79,27 @@ angular.module('imprintControllers',[])
   ]
   $scope.boardDetails=[
     {
-    
+
+    },
+  ]
+  $scope.gpuDetails=[
+    {
+
+    },
+  ]
+  $scope.mouseDetails=[
+    {
+
+    },
+  ]
+  $scope.keyboardDetails=[
+    {
+
+    },
+  ]
+  $scope.driveDetails=[
+    {
+
     },
   ]
 })

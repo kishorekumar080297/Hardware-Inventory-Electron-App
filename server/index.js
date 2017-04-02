@@ -26,7 +26,9 @@ app.get('/', function(req, res){
 //Get details from the client
 app.post('/getDetails', storeDetailController.storeDetail);
 
-// app.get('/getDetails', storeDetailController.getDetail);
+app.get('/getDetails/:uuid', storeDetailController.getDetail);
+
+app.get('/getAll', storeDetailController.getAll);
 
 ///Check if admin
 app.get('/isAdmin', function(req,res){

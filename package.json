@@ -15,10 +15,12 @@
   "dependencies": {
     "angular": "1.2.5",
     "angular-material-data-table": "^0.10.10",
+    "async": "^2.2.0",
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",
     "electron": "^1.6.1",
     "express": "^4.15.2",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "underscore": "^1.8.3"
   }
 }

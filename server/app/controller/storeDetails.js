@@ -10,4 +10,16 @@ exports.storeDetail = function(req, res){
     res.status(200);
     res.send({status:"Success"});
 };
- 
+
+exports.getDetail = function(req, res){
+	var uuid = req.params.uuid;
+	var string_data = client.get(uuid);
+	var json_data = JSON.parse(string_data);
+	res.status(200);
+	res.send(json_data);
+};
+
+exports.getAll = function(req, res){
+	var keys = client.get("*");
+	console.log(keys);
+};
