@@ -7,7 +7,7 @@
     "start": "electron .",
     "test": "http-server ./www -o"
   },
-  "author": "ranjithkumar,kishorekumar,shakaleshwar,sathishkumar,meenakshi,oviya,amruthasridhar",
+  "author": "kishorekumar,ranjithkumar",
   "license": "ISC",
   "devDependencies": {
     "electron": "^1.6.1"
