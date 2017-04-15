@@ -1,4 +1,3 @@
-# Hardware-Inventory-Electron-App
 # About
 A simple electron application for admin systems running on Windows OS built on top of angularjs that fetches the hardware details of its peers connected in the same network.
 # Dependencies
