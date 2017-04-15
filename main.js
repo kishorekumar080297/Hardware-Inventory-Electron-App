@@ -10,8 +10,8 @@ app.on('ready',function() {
     mainWindow=new BrowserWindow({
       icon:'img/logo2.png',
       name:"Imprint",
-      width:1024,
-      height:768});
+      width:1280,
+      height:720});
       // mainWindow.setMenu(null);
 
     mainWindow.loadURL(url.format({
