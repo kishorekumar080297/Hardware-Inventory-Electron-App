@@ -7,3 +7,6 @@ A python code to fetch the hardware details from its peers.
 # Usage
 1. `cd Hardware-Inventory-Electron-App`
 2. `npm start`
+
+## [License](/LICENSE.md)
+Copyright (c) 2017 Kishore Kumar <kishorekumar080297@gmail.com>  
